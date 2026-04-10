@@ -1,0 +1,55 @@
+{
+  "name": "@math-examples/root",
+  "version": "0.1.0",
+  "license": "MIT",
+  "exports": "./core/mod.ts",
+  "tasks": {
+    "test": "deno test --allow-read",
+    "test:watch": "deno test --allow-read --watch",
+    "fmt": "deno fmt",
+    "fmt:check": "deno fmt --check",
+    "lint": "deno lint",
+    "check": "deno check core/ domains/ frontiers/ applications/ scripts/",
+    "bench": "deno bench --allow-read benchmarks/",
+    "demo": "deno run --allow-read",
+    "new": "deno run --allow-read --allow-write scripts/new-concept.ts",
+    "check:citations": "deno run --allow-read scripts/check-citations.ts",
+    "build:index": "deno run --allow-read --allow-write scripts/build-index.ts",
+    "bump": "deno run --allow-read --allow-write scripts/bump-version.ts",
+    "verify": "deno task fmt:check && deno task lint && deno task check && deno task test"
+  },
+  "imports": {
+    "@math/core": "./core/mod.ts",
+    "@math/core/numeric": "./core/numeric/mod.ts",
+    "@math/core/linalg": "./core/linalg/mod.ts",
+    "@math/core/random": "./core/random/mod.ts",
+    "@math/core/viz": "./core/viz/mod.ts",
+    "@math/core/testing": "./core/testing/mod.ts",
+    "@std/assert": "jsr:@std/assert@^1.0.8",
+    "@std/fs": "jsr:@std/fs@^1.0.6",
+    "@std/path": "jsr:@std/path@^1.0.8",
+    "@std/fmt": "jsr:@std/fmt@^1.0.3",
+    "fast-check": "npm:fast-check@^3.23.1"
+  },
+  "fmt": {
+    "lineWidth": 100,
+    "indentWidth": 2,
+    "singleQuote": false,
+    "semiColons": true,
+    "exclude": [
+      "**/*.md",
+      "**/*.bib"
+    ]
+  },
+  "lint": {
+    "rules": {
+      "tags": [
+        "recommended"
+      ]
+    }
+  },
+  "exclude": [
+    ".git",
+    "apps/showcase/target"
+  ]
+}
