@@ -1,5 +1,5 @@
 /**
- * @math/core — shared primitives used across every math-examples domain.
+ * @math/core — shared primitives used across every mathcraft domain.
  *
  * This is the public entry point. Subsystems are available as their own
  * barrel modules via the import map in `deno.json`:

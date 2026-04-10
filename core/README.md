@@ -1,6 +1,6 @@
 # core/
 
-Shared primitives used across every math-examples domain. This is the only
+Shared primitives used across every mathcraft domain. This is the only
 module intended to be published (eventually to JSR as `@math/core`).
 
 | Module                 | Contents                                    |

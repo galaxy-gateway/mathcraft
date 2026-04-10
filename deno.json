@@ -1,5 +1,5 @@
 {
-  "name": "@math-examples/root",
+  "name": "@mathcraft/root",
   "version": "0.1.0",
   "license": "MIT",
   "exports": "./core/mod.ts",

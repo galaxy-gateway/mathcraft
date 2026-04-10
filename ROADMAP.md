@@ -1,6 +1,6 @@
 # Roadmap
 
-math-examples is built in phases. Phase 1 establishes the pattern with four
+mathcraft is built in phases. Phase 1 establishes the pattern with four
 flagship deep-dives and a pair of frontier/application seeds. Later phases fan out.
 
 ---

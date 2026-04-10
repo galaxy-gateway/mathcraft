@@ -1,4 +1,4 @@
-# Contributing to math-examples
+# Contributing to mathcraft
 
 Thanks for helping build the most complete mathematical concept repository in code.
 

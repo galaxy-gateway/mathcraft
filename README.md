@@ -1,8 +1,8 @@
-# math-examples
+# mathcraft
 
 > The go-to reference for mathematical concepts in code — from foundations to the bleeding edge.
 
-**math-examples** is a TypeScript-on-Deno repository that aims to be the most complete
+**mathcraft** is a TypeScript-on-Deno repository that aims to be the most complete
 mathematical concept reference available as working code. It spans every major branch
 of mathematics, shows how each concept can be used to build interesting or useful
 things, and explicitly surfaces bleeding-edge algorithms alongside the classics.
@@ -10,7 +10,7 @@ things, and explicitly surfaces bleeding-edge algorithms alongside the classics.
 No install step. No bundler. Just Deno, TypeScript, and markdown.
 
 ```bash
-git clone <this-repo> && cd math-examples
+git clone <this-repo> && cd mathcraft
 deno task test                                    # run everything
 deno task demo domains/01-number-theory/extended-euclidean/demo.ts
 ```

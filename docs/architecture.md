@@ -1,6 +1,6 @@
 # Architecture
 
-This document explains how `math-examples` is laid out and why.
+This document explains how `mathcraft` is laid out and why.
 
 ---
 
@@ -25,7 +25,7 @@ This document explains how `math-examples` is laid out and why.
 ## Directory layout
 
 ```
-math-examples/
+mathcraft/
 ├── core/          # Primitives everything else depends on
 ├── domains/       # Classical math taxonomy
 ├── frontiers/     # Bleeding-edge topics

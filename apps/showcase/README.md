@@ -1,4 +1,4 @@
-# showcase — Interactive math-examples viewer
+# showcase — Interactive mathcraft viewer
 
 > **Phase 2.** Not yet implemented. This document describes the intended
 > architecture so the work has a clear starting point.
@@ -79,6 +79,6 @@ Nothing in the rest of the repo. Every `demo.ts` remains a pure function from
 stdin (nothing) to stdout (one JSON document). The viz contract is the
 interface, not the Tauri app's data model.
 
-This is the key architectural decision of math-examples: the CLI-first repo
+This is the key architectural decision of mathcraft: the CLI-first repo
 ships today, and the GUI can be built, rebuilt, or replaced without touching
 a single concept file.
