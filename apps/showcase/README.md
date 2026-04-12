@@ -1,11 +1,26 @@
 # showcase — Interactive mathcraft viewer
 
-> **Phase 2.** Not yet implemented. This document describes the intended
-> architecture so the work has a clear starting point.
-
-A Rust + Tauri desktop application that turns the CLI JSON output of every
+A Rust + Tauri v2 desktop application that turns the CLI JSON output of every
 `demo.ts` into rich, interactive visualizations — without requiring any demo
 to be rewritten.
+
+## Running the app
+
+```bash
+cd apps/showcase
+npm install
+npm run tauri dev
+```
+
+The `deno` CLI must be on your PATH — the app shells out to it when running demos.
+
+## Building a release binary
+
+```bash
+npm run tauri build
+```
+
+Produces a native binary + installer in `src-tauri/target/release/bundle/`.
 
 ---
 
@@ -42,7 +57,7 @@ to be rewritten.
 
 ---
 
-## Directory layout (planned)
+## Directory layout
 
 ```
 showcase/
@@ -51,25 +66,30 @@ showcase/
 │   ├── tauri.conf.json
 │   └── src/
 │       ├── main.rs
+│       ├── lib.rs          # Tauri command registration
 │       ├── scan.rs         # Discovers demo.ts files
 │       └── run.rs          # Spawns deno child processes
-├── src/                    # TypeScript frontend
-│   ├── App.tsx
-│   ├── renderers/          # One per viz kind
-│   └── concept-browser/
-├── package.json            # frontend deps (Vite + React)
+├── src/                    # React + TypeScript frontend
+│   ├── App.tsx             # Shell: sidebar + main panel
+│   ├── types.ts            # Mirrors core/viz/emit.ts
+│   ├── hooks/              # useDemos, useRunDemo
+│   ├── components/         # Sidebar, DemoPanel, VizDisplay, AnimationScrubber
+│   └── renderers/          # One per viz kind
+├── package.json            # frontend deps (Vite + React + D3)
+├── vite.config.ts
+├── tsconfig.json
 └── README.md               # this file
 ```
 
 ---
 
-## What ships with Phase 2
+## What Phase 2 ships
 
-- Tauri binary on macOS, Linux, Windows
-- Renderers for all seven Phase 1 `kind` values
-- Concept browser with the same README rendering as GitHub
-- Scrubber for `frames`-based animations
-- Bookmark system for favorite concepts
+- Tauri v2 binary (macOS/Linux/Windows)
+- Renderers for all seven viz-contract `kind` values:
+  `scalar`, `curve`, `heatmap`, `point-cloud`, `graph`, `complex-plane`, `vector-field`
+- Concept browser sidebar grouped by section → category → concept
+- Animation scrubber for `frames`-based demos
 
 ---
 

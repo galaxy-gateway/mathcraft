@@ -1,6 +1,6 @@
 {
   "name": "@mathcraft/root",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "license": "MIT",
   "exports": "./core/mod.ts",
   "tasks": {
@@ -50,6 +50,6 @@
   },
   "exclude": [
     ".git",
-    "apps/showcase/target"
+    "apps/showcase"
   ]
 }
