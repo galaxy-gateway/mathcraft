@@ -104,4 +104,4 @@ add tests, and open a PR.
 
 ## License
 
-MIT
+Code is MIT (see LICENSE); written reference content and explanations are CC BY 4.0 (see LICENSE-CONTENT).
